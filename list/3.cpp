@@ -66,7 +66,10 @@ int main(){
     list* h1 = NULL; list* t1 = NULL;
     list_copy(h1, t1, h, t);
     cout << endl << "Введен список: "; print(h1, t1);
-    
+     h1 = NULL;  t1 = NULL;
+    list_copy(h1, t1, h, t);
+    bubbleSort(h1, t1);
+    cout << endl << "Отсортированный список: "; print(h1, t1);
     return 0;
 }
 
