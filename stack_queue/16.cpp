@@ -31,7 +31,13 @@ int main(){
         if (x<min) min = x;
         push(h, t, x);
     }
-   
+    queue *h1 = NULL; queue *t1 = NULL;
+    while(h){
+        int i=pop(h, t);
+        if (i == max) push(h1, t1, min);
+        push(h1, t1, i);
+    }
+    while(h1) cout << pop(h1, t1) << " ";
     return 0;
 }
 
