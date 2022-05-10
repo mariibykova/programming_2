@@ -36,4 +36,19 @@ int main() {
 		push(h, x);
 	}
 
+	stack* head_copy = NULL;
+	stack* head1 = NULL;
+
+	while (h) {
+		int i = pop(h);
+		if (i % 2 != 0) push(head1, i);
+		if (i % 2 == 0) push(head_copy, i);
+	}
+
+	reverse(head_copy);
+
+	while (head_copy) push(head1,pop(head_copy));
+
+	while (head1) cout << pop(head1) << " ";
+
 }
