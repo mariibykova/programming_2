@@ -72,5 +72,18 @@ int main(){
     list* H2 = NULL; list* T2 = NULL;
     list_copy(H2, T2, h, t); 
 
+    while(H2){
+        if (H2->inf %2 ==0) push(h1, t1, H2->inf);
+        else push(h2, t2, H2->inf);
+        H2 = H2 -> next;
+ 
+    }
+    
+    while(h2){
+        push(h1, t1, h2->inf);
+        h2 = h2 -> next;
+    }
+    cout << endl << "Изменение массива "; print(h1, t1);
+
     return 0;
 }
