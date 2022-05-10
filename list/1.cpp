@@ -74,5 +74,9 @@ int main(){
     cout << endl << "Введен список: "; print(h1, t1);
     h1 = NULL; t1 = NULL;
 
+    list_copy(h1, t1, h, t);
+    while(find(h1, t1, max)) del_node(h1, t1, find(h1, t1, max));
+    cout << endl << "Удаление всех максимумов "; print(h1, t1);
+
     return 0;
 }
