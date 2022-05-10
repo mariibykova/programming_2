@@ -37,5 +37,12 @@ int main() {
 		push(h, x);
 	}
 
-	
+	stack* head1 = NULL;
+	while (h) {
+		int i = pop(h);
+		if (i!=max) push(head1, i);
+
+	}
+	while (head1) cout << pop(head1) << " ";
+
 }
